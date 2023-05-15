@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "outDir": "build",
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": [
+      "node"
+    ]
+  }
+}
