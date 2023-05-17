@@ -1,7 +1,7 @@
 > 🚧 Developing
 # @tinify_cli/cli
 <p align="center">
-  <a href="https://www.npmjs.com/package/@tinify_cli/cli"><img src="https://badgen.net/npm/dm/ice.js" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/@tinify_cli/cli"><img src="https://badgen.net/npm/dm/@tinify_cli/cli" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/@tinify_cli/cli"><img src="https://badgen.net/npm/v/@tinify_cli/cli" alt="Version"></a>
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" /></a>
   <a href="https://github.com/SoloJiang/tinify-cli/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
