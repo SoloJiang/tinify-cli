@@ -1,9 +1,13 @@
 {
-  "name": "tinify-cli",
+  "name": "@tinify_cli/cli",
   "version": "0.1.0",
   "description": "A compress image resource cli tool througth by tinify",
   "main": "index.js",
-  "bin": "./dist/cli.js",
+  "bin": {
+    "tinify": "./dist/cli.js"
+  },
+  "bugs": "https://github.com/SoloJiang/tinify-cli/issues",
+  "homepage": "https://github.com/SoloJiang/tinify-cli",
   "scripts": {
     "watch": "esno ./scripts/transform.ts --watch",
     "build": "esno ./scripts/transform.ts",

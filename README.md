@@ -1,8 +1,8 @@
 > 🚧 Developing
-# tinify-cli
+# @tinify_cli/cli
 <p align="center">
-  <a href="https://www.npmjs.com/package/tinify-cli"><img src="https://badgen.net/npm/dm/ice.js" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/tinify-cli"><img src="https://badgen.net/npm/v/tinify-cli" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/@tinify_cli/cli"><img src="https://badgen.net/npm/dm/ice.js" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/@tinify_cli/cli"><img src="https://badgen.net/npm/v/@tinify_cli/cli" alt="Version"></a>
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" /></a>
   <a href="https://github.com/SoloJiang/tinify-cli/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
 </p>
@@ -28,13 +28,13 @@ source ~/.zshrc
 ### Compress
 
 ```bash
-$ tinify-cli compress
+$ tinify compress
 ```
 
 ### Generate to Webp
 
 ```bash
-$ tinify-cli generate
+$ tinify generate
 ``` 
 
 ### Common options
@@ -54,7 +54,7 @@ The name of the file to transform.
 
 #### `--cwd`
 **short：** `-c`
-The working directory of where tinify-cli command will be executed in, all other paths options are relative to this path.
+The working directory of where @tinify_cli/cli command will be executed in, all other paths options are relative to this path.
 
 #### `--dir`
 **short：** `-d`
