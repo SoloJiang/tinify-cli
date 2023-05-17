@@ -8,9 +8,11 @@
     "target": "esnext",
     "moduleResolution": "nodenext",
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
     "lib": [
       "ESNext",
-      "dom"
+      "DOM"
     ],
     "sourceMap": true,
     "allowJs": true,

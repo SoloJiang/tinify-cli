@@ -19,8 +19,13 @@ const parseArgsOptions = {
 function genResultFile(path: string | string[]) {
   return esbuild.build({
     entryPoints: Array.isArray(path) ? path : [path],
+    outbase: SRC_DIR,
     outdir: DIST_DIR,
     platform: 'node',
+    format: 'cjs',
+    sourcemap: true,
+    allowOverwrite: true,
+    write: true,
   });
 }
 
