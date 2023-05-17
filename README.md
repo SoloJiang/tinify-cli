@@ -14,6 +14,12 @@ A compress image resource cli tool [througth by tinify](https://tinypng.com/deve
 - Compress any image files in your local
 - Watch mode, it can listen the assets dir, and auto execute convert or compress action
 
+## Install
+
+```bash
+$ npm install @tinify_cli/cli -g
+```
+
 ## Set up
 First of all, it need get [tinify token](https://tinypng.com/developers). Copy it to your env file(like `~/.zshrc` in Mac OSX) as `TINIFY_TOKEN=xxxxxxx`.
 
