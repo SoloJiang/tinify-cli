@@ -21,7 +21,7 @@ $ npm install @tinify_cli/cli -g
 ```
 
 ## Set up
-First of all, it need get [tinify token](https://tinypng.com/developers). Copy it to your env file(like `~/.zshrc` in Mac OSX) as `TINIFY_TOKEN=xxxxxxx`.
+First of all, it need get [tinify token](https://tinypng.com/developers). Copy it to your env file(like `~/.zshrc` in Mac OSX) as `export TINIFY_TOKEN=xxxxxxx`.
 
 Finally, execute the command:
 
