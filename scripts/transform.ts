@@ -3,11 +3,12 @@ import esbuild from 'esbuild';
 import { parseArgs } from 'node:util';
 import { watch } from 'chokidar';
 import { join } from 'path';
+import { rmSync } from 'node:fs';
 
 const cwd = process.cwd();
 const SRC_DIR = 'src';
 const DIST_DIR = 'dist';
-const args = ['-w'];
+const args = process.argv.slice(2);
 const parseArgsOptions = {
   watch: {
     type: 'boolean' as const,
@@ -43,7 +44,6 @@ function transform() {
     args,
     options: parseArgsOptions,
   });
-  genResultFile(files);
 
   // Watch mode
   if (commandArgs.watch) {
@@ -56,7 +56,14 @@ function transform() {
 
     console.log('Watching for file changes...\n');
     watcher.on('add', updateResultFile).on('change', updateResultFile);
+  } else {
+    try {
+      rmSync(join(cwd, DIST_DIR), {
+        recursive: true,
+      });
+    } catch (err) {}
   }
+  genResultFile(files);
 }
 
 transform();

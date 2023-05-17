@@ -15,7 +15,8 @@
     "webp"
   ],
   "files": [
-    "./dist"
+    "dist",
+    "!dist/**/*.map"
   ],
   "author": "SoloJiang",
   "license": "MIT",
