@@ -41,25 +41,31 @@ $ tinify generate
 
 #### `--all`
 **short：** `-a`
+
 Transform all files in the directory.
 
 #### `--watch`
 **short：** `-w`
+
 Watch mode, the transform action wont\'t act immediately when the command is executed.
 
 #### `--name`
 **short：** `-n`
+
 The name of the file to transform. 
 > Note: With this option, the `--all` will be invalid.
 
 #### `--cwd`
 **short：** `-c`
+
 The working directory of where @tinify_cli/cli command will be executed in, all other paths options are relative to this path.
 
 #### `--dir`
 **short：** `-d`
+
 The directory to transform.
 
 #### `--output`
 **short：** `-o`
+
 The directory to store the transformed files.
