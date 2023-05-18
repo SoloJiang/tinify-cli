@@ -10,12 +10,13 @@ class Watcher {
   #pendingTransformFiles: string[] = [];
   #updateFileAction: UpdateFileAction;
   constructor(options: BaseCommandOptions, updateFileAction: UpdateFileAction) {
-    const { cwd, dir } = options;
+    const { cwd, dir, output } = options;
     this.#instance = watch(join(cwd, dir), {
       ignoreInitial: true,
       awaitWriteFinish: {
         stabilityThreshold: 600,
       },
+      ignored: new RegExp(join(cwd, output)),
     });
     this.#updateFileAction = updateFileAction;
 
