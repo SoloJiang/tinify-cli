@@ -48,5 +48,6 @@
     "clipanion": "^3.2.0",
     "colorette": "^2.0.20",
     "tinify": "^1.7.1"
-  }
+  },
+  "packageManager": "pnpm@7.29.1"
 }
