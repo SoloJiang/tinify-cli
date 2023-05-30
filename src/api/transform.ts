@@ -7,6 +7,7 @@ import { ErrorInfo } from '../types/error';
 import { formatError, logError } from '../utils/error';
 import { isDirectory } from '../utils/file';
 import { getTinifyKey } from '../utils/key';
+import { isJPG, isPNG, isWebp } from '../utils/imageType';
 
 tinify.key = getTinifyKey();
 
@@ -44,30 +45,39 @@ export async function transformSingleFile(
 ) {
   try {
     const { cwd, dir, output } = options;
-    const source = tinify.fromFile(filepath);
-    source.preserve('copyright', 'creation');
-    // Compute output dir
-    const parsedFilePath = parse(filepath);
-    const sourceDir = resolve(cwd, dir);
-    const outputPath = join(
-      output,
-      parsedFilePath.dir.replace(sourceDir, ''),
-    );
-    if (toWebp) {
-      const converted = source.convert({
-        type: 'image/webp',
-      });
-      await converted.toFile(join(outputPath, `${parsedFilePath.name}.webp`));
-    } else {
-      await source.toFile(join(outputPath, parsedFilePath.base));
+
+    if (isPNG(filepath) || isJPG(filepath) || isWebp(filepath)) {
+      const source = tinify.fromFile(filepath);
+      source.preserve('copyright', 'creation');
+      // Compute output dir
+      const parsedFilePath = parse(filepath);
+      const sourceDir = resolve(cwd, dir);
+      const outputPath = join(
+        output,
+        parsedFilePath.dir.replace(sourceDir, ''),
+      );
+      if (toWebp) {
+        const converted = source.convert({
+          type: 'image/webp',
+        });
+        await converted.toFile(join(outputPath, `${parsedFilePath.name}.webp`));
+      } else {
+        await source.toFile(join(outputPath, parsedFilePath.base));
+      }
+      console.log(colors.green(`Transformed ${filepath}`));
+      return;
     }
-    console.log(colors.green(`Transformed ${filepath}`));
+    console.log(colors.yellow(`Skipped ${filepath}`));
   } catch (err) {
     throw new Error(err);
   }
 }
 
-export function transformFiles(filepaths, options: BaseCommandOptions, toWebp?: boolean) {
+export function transformFiles(
+  filepaths,
+  options: BaseCommandOptions,
+  toWebp?: boolean,
+) {
   let errors: ErrorInfo[] = [];
   const tasks = filepaths.map((filepath) => {
     // Exclude directories
