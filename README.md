@@ -1,4 +1,3 @@
-> 🚧 Developing
 # @tinify_cli/cli
 <p align="center">
   <a href="https://www.npmjs.com/package/@tinify_cli/cli"><img src="https://badgen.net/npm/dm/@tinify_cli/cli" alt="Downloads"></a>
@@ -39,13 +38,13 @@ $ source ~/.zshrc
 ### Compress
 
 ```bash
-$ tinify compress
+$ tinify compress --name=[YOUR_IMAGE_PATH]
 ```
 
 ### Generate to Webp
 
 ```bash
-$ tinify generate
+$ tinify generate --name=[YOUR_IMAGE_PATH]
 ``` 
 
 ### Common options

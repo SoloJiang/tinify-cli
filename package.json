@@ -1,6 +1,6 @@
 {
   "name": "@tinify_cli/cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A compress image resource cli tool througth by tinify",
   "main": "index.js",
   "bin": {
